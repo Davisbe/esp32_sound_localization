@@ -1,0 +1,18 @@
+{
+  "name": "esp32-sound-localization",
+  "dependencies": [
+    "eigen3",
+    "gflags",
+    {
+      "name": "glog",
+      "version>=": "0.7.0"
+    },
+    "ceres"
+  ],
+  "overrides": [
+    {
+      "name": "ceres",
+      "version": "2.0.0#6"
+    }
+  ]
+}
