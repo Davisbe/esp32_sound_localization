@@ -8,7 +8,7 @@ This project's aim is to calculate localized coordinates of a sound source. The 
 
 ![High level diagram of the project's system](https://i.imgur.com/UaeHKsO.png)
 
-The time difference of arrival (TDOA) is needed to do further calculations in this project's case. The solution used here is using WLS (Weighted Least Squares), but [many other more advanced techniques](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6603714/#B29-sensors-19-02554) are used.
+The time difference of arrival (TDOA) is needed to do further calculations in this project's case. The solution used here is using WLS (Weighted Least Squares), but [many other more advanced techniques](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6603714/) are used.
 
 To start getting results of a sound source, all 3 ESP32s need to be connected to the websocket server and the distances between the ESP32s need to be entered. The ESP32s will be shown visually along with the calculated coordinates of the sound:
 ![Screenshot of the web UI of the location results](https://i.imgur.com/zFg6ENP.png)
