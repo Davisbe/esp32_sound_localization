@@ -22,17 +22,12 @@ project ("esp32_sound_localization")
 find_package(Ceres REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-add_executable(esp32_sound_localization wasm-module/wasm_module.cpp)
-set_target_properties(esp32_sound_localization PROPERTIES
+add_executable(wasm_module wasm-module/wasm_module.cpp)
+set_target_properties(wasm_module PROPERTIES
     LINK_FLAGS "-sEXPORTED_FUNCTIONS=['_malloc','_free'] -sEXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -sWASM_BIGINT -O2 -sASSERTIONS" #-sMODULARIZE 
 )
-target_link_libraries(esp32_sound_localization Ceres::ceres)
-target_link_libraries(esp32_sound_localization Eigen3::Eigen)
-
-
-# cmake commands:
-# cmake -S. -Bbuild
-# cmake --build build
+target_link_libraries(wasm_module Ceres::ceres)
+target_link_libraries(wasm_module Eigen3::Eigen)
 
 # emscripten commands:
 # emcmake cmake -S. -Bbuild
