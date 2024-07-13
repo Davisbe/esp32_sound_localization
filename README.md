@@ -13,7 +13,7 @@ The time difference of arrival (TDOA) is needed to do further calculations in th
 To start getting results of a sound source, all 3 ESP32s need to be connected to the websocket server and the distances between the ESP32s need to be entered. The ESP32s will be shown visually along with the calculated coordinates of the sound:
 ![Screenshot of the web UI of the location results](https://i.imgur.com/zFg6ENP.png)
 ## TODO
-This project is at the 80% done stage. It works, however a lot of polish and tweaking is needed:
+This project is at the 80% done stage. It works, however a lot of polish and tweaking is needed (still has a lot of useless and debug code):
 * Time synchronization between the ESP32s needs to be improved (or removed altogether, by setting a predetermined offset for sending packets). Current time sync (checked manually through Audacity by clapping and looking at the waveforms):
   ![Table of time synchronization test results between the ESP32s](https://i.imgur.com/KjXVmfx.png)
   The automatic time synchronization test function provides much worse results, where the time differences can range up to 30ms between the microcontrollers, which doesn't bode well for the actual calculation of the position of the sound source.
